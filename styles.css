@@ -1,0 +1,477 @@
+/* Global */
+*{
+    padding: 0%;
+    margin: 0%;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation Bar */
+a{
+    text-decoration: none;
+}
+header{
+    text-align: center;
+}
+.navigation{
+    background-color: black;
+}
+.navigation a{
+    color: white;
+    font-family: 'Noto Sans Limbu';
+}
+.to-home{
+    padding-right: 15px;
+}
+.to-services{
+    padding-left: 15px;
+}
+.navigation a:hover{
+    color: black;
+    background-color: white;
+}
+body{
+    scroll-snap-type: y mandatory;
+}
+/* Global header */
+.logo{
+    font-family: 'Oswald';
+    letter-spacing: 10px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 54px;
+}
+.services, .register{
+    color: white;
+    text-decoration: none;
+    background-color: #000000;
+    padding: 5px;
+    font-size: 42px;
+}
+.services:hover, .register:hover{
+    color: yellow;
+    font-style: oblique;
+    padding: 10px;
+    font-size: 48px;
+}
+/* Global Footer */
+footer{
+    background-color: #111;
+}
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footer-nav ul li{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+.footer-nav ul li:hover{
+    opacity: 1;
+    color: yellow;
+}
+.footer-container{
+    width: 50%;
+    padding: 20px 20px 10px;
+}
+.footer-nav{
+    margin: 30px 0;
+}
+/* index image container & effects */
+.tour-button{
+    font-family: 'Noto Sans Limbu';
+    padding: 8px;
+    font-style: oblique;
+    background-color: rgb(255, 255, 99);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.tour-button:hover{
+    background-color: black;
+    color: rgb(255, 255, 99);
+    text-shadow: #FC0 1px 0 10px;
+}
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.services-container{
+    position: relative;
+    text-align: center;
+    background-image: url(./images/puppybath.jpeg);
+    background-color: #cccccc;
+    background-size:cover;
+    background-position: center;
+    color: white;
+    width: 50vw;
+    height: 100vh;
+    font-family: 'Oswald';
+}
+.services-container::before, .register-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+}
+.services-container h2, .register-container h2{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+.register-container{
+    text-align: center;
+    width: 50vw;
+    height: 100vh;
+    background-image: url(./images/puppyfamily.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Oswald';
+}
+.services-container, .register-container{
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.services-container:hover::before, .register-container:hover::before{
+    filter: none;
+}
+/* Function Container */
+.functions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    scroll-behavior: smooth;
+} 
+.functions h3{
+    font-size: 30px;
+    font-family: 'Oswald';
+}
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #909090, #000000);
+    padding: 20px;
+    border-radius: 10px;
+}
+.flex-container:hover{
+    background: linear-gradient(90deg,  #9c9c9c, #000000);
+}
+.flex-container img{
+    width: 400px;
+    height: 400px;
+    margin-right: 25px;
+}
+.flex-container div{
+    text-align: center;
+}
+.index-button{
+    text-decoration: none;
+    border: none;
+    background-color: #F6E96B;
+    padding: 5px;
+    cursor: pointer;
+}
+.index-button:hover{
+    background-color: #ffe600;
+}
+
+/* Card Styling */
+#petCount, #petAge, #petNames{
+    color: #000000;
+    text-decoration: underline;
+    font-size: 40px;
+    background-color: white;
+}
+#petNames{
+    padding: 20px;
+    letter-spacing: 1.5;
+}
+.go-up{
+    display: none;
+    position: fixed;
+    float: right;
+    bottom: 20px;
+    right: 30px;
+    padding: 15px;
+    z-index: 99;
+    text-align: center;
+    font-family: 'Oswald';
+    cursor: pointer;
+    opacity: 70%;
+    background-color: white;
+    border-radius: 30px;
+}
+.go-up:hover{
+    opacity: 100%;
+}
+.go-up i{
+    font-size: 42px;
+}
+/* Services Form */
+.main-form{
+    display:flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+.form-container{
+    padding: 20px 25px;
+    max-width: 850px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.form-container, .form-title{
+    font-size: 24px;
+    position: relative;
+}
+.form-container, .form-title::before{
+    content:'';
+    position: absolute;
+    background: rgb(222, 222, 255);
+}
+.form-container form, .pet-details{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+form .pet-details, .input-box{
+    margin: 20px 0 12px 0; 
+    width: calc(100%/2-20px);
+}
+.pet-details, .input-box, .details{
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.pet-details, .input-box input{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 20px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.pet-details, .input-box input:focus,
+.pet-details, .input-box input:valid{
+    border-color: #727272;
+}
+option{
+    font-size: 20px;
+}
+select{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: #ccc;
+}
+
+form .button button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+form .button button:hover{
+    background: linear-gradient(-135deg, #000000, #ffac06);
+    cursor: pointer;
+    color: yellow;
+}
+@media (max-width:584px){
+    .form-container{
+        max-width: 100%;
+    }
+    .form-container, .pet-details, .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .form-container form, .pet-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .pet-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
+#petsTotal{
+    font-size: medium;
+}
+.action{
+    text-align: center;
+}
+
+/* Service Registration */
+#descriptionInput{
+    width: 500px;
+    height: 125px;
+}
+.error-container{
+    padding-top: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+.error-message{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(254, 77, 77);
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #000000;
+}
+.service-container{
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    
+}
+.service-container h2{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    font-size: 30px;
+    font-family: 'PT Sans'
+}
+.service-container h2::after{
+    content: '';
+    background: #f0ff4a;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row, .first-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.service{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+.service i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #f5c947;
+}
+.service h3{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.service:hover{
+    background-color: rgb(242, 242, 242);
+    color:rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+.service:hover i{
+    color: #ffc4c4;
+}
+.price{
+    font-size: 14px;
+    color: green;
+}
+.service-container{
+    height: 60vh;
+    align-items: center;
+    text-align: center;
+}
+.service-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.service-title h2{
+    font-size: 46px;
+    margin-bottom: 5px;
+    font-family: "Oswald";
+    padding-bottom: 15px;
+}
+.service-title{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.service-input{
+    width: 400px;
+    outline: none;font-weight: 500;
+    border-radius: 20px;
+    text-align: center;
+}
+.service-form textarea{
+    height: 140px;
+    padding-top: 15px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Noto Sans Limbu";
+}
+.service-input:focus{
+    border: 2px solid  rgb(255, 245, 106);
+}
+.service-form button{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+}
+.subtitle{
+    padding-top: 6%;
+    padding-bottom: 3%;
+    font-family: "Oswald";
+    font-size: 42px;
+
+}

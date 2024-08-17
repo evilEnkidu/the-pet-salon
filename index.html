@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Pet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Limbu&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6814d427e4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="logo">Fashion Pet</h1>
+        <h3 class="tour-button" id="start">start tour</h3>
+    </header>
+    <main>
+        <div class="menu-container" id="main-section">
+            <div class="services-container">
+                <h2><a href="./services.html" class="services">OUR SERVICES</a></h2>
+                
+            </div>
+            <div class="register-container">
+                <h2><a href="./register.html" class="register">REGISTER YOUR PET</a></h2>
+            </div>
+        </div>
+    </main>
+
+    <div class="functions" id="section1">
+        <div class="flex-container">
+            <img src="./images/bath.jpg" alt="">
+            <div>
+                <button class="index-button" id="count-button" onclick="showPetCount()"><h3>SEE OUR QUEUE</h3></button>
+            </div>
+        </div>
+    </div>
+    <div class="functions" id="section2">
+        <div class="flex-container">
+            <img src="./images/bath3.jpg" alt="">
+            <div>
+                <button class="index-button" id="name-button" onclick="showPetNames()"><h3>SEE OUR NAMES</h3></button>
+            </div>
+        </div>
+    </div>
+    <div class="functions" id="section3">
+        <div class="flex-container">
+            <img src="./images/bath2.jpg" alt="">
+            <div>
+                <button class="index-button" id="age-button" onclick="showAverageAge()"><h3>AVERAGE AGE</h3></button>
+            </div>
+        </div>
+    </div>
+    <div class="go-up" id="to-main" onclick="topFunction()">
+        <i class="fa-solid fa-up-long"></i>
+        <p>Go Back</p>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                    <ul>
+                    <li>Puppy Vogue</li>
+                    <li>Pet Trends</li>
+                    <li>Login as Admin</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script src="./scripts/jQuery3.7.js"></script>
+<script src="./scripts/index.js"></script>
+</body>
+</html>
