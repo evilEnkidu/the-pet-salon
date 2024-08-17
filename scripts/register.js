@@ -38,12 +38,13 @@ function register(){
         document.getElementById("petForm").reset();
         console.log(pets);
         updateTable();
+        updateDropdown();
     }
     else{
         alert("Please enter valid information");
         return false;
     }
-
+    
 }
 
 // study this
@@ -79,6 +80,7 @@ function startingPets(){
     pets.push(pet1, pet2, pet3);
     updateTable();
     updateCount();
+    updateDropdown();
 }
 
 window.onload=startingPets;

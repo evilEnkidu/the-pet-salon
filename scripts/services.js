@@ -16,6 +16,7 @@ function startingServices(){
     var service1 = new ServiceConstructor("Nail Clipping", "We recycle your dogs nails", "15");
     services.push(service1);
     updateServiceSection();
+    updateDropdown();
 }
 
 // read input that will go to service constructor //
@@ -35,6 +36,7 @@ function addService(){
         $('.error-container .error-message').remove(); // Remove error message if present
     }
     $('#service-form')[0].reset();
+    return updateDropdown();
 }
 
 // update service section at start and each time a new service is added//

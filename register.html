@@ -40,8 +40,13 @@
                         <input type="text" placeholder="Your Pet's breed" id="breedText">
                     </div>
                     <div class="input-box">
-                        <span class="details">What service would you like?</span>
-                        <input type="text" placeholder="Service" id="serviceText">
+                        <label for="serviceText">Service:</label>
+                        <select name="select" id="serviceText">
+                            <option value="Checkup">Checkup</option>
+                            <option value="Grooming">Grooming</option>
+                            <option value="Boarding">Boarding</option>
+                            <option value="Nails">Nails</option>
+                        </select>
                     </div>
                     <div class="input-box">
                         <label for="typeOption" class="details">Pet type:</label>
@@ -90,6 +95,10 @@
             </tbody>
           </table>
     </div>
+
+    <script src="./scripts/jQuery3.7.js"></script>
+    <script src="./scripts/store-manager.js"></script>
+    <script src="./scripts/services.js"></script>
     <script src="./scripts/register.js"></script>
 </body>
 </html>
